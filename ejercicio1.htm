@@ -1,0 +1,27 @@
+<canvas id='canvas' width="600px" height="400px">
+<script>
+	function triangle(x1, y1, x2, y2, x3, y3, colBord, colRell, grosor){
+	ctx.beginPath();
+	ctx.strokeStyle = colBord;
+	ctx.fillStyle = colRell;
+	ctx.lineWidth = grosor;
+	ctx.moveTo(x1,y1);
+	ctx.lineTo(x2,y2);
+	ctx.lineTo(x3,y3);	
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+}
+
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d');
+
+	triangle(46,208, 64,130, 406,231,'rgba(58,96,160)','rgba(65,113,199)', 2)
+
+
+	triangle(46,270, 113,324, 323,64,'rgba(58,96,160)','rgba(252,206,172)', 2)
+
+
+	triangle(216,33, 305,343, 388,315,'rgba(58,96,160)','rgba(255,240,0)', 2)
+
+</script>
